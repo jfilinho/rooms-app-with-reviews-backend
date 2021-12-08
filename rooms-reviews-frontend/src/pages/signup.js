@@ -40,13 +40,14 @@ function Signup() {
             );
 
             console.log(response);
-
-            setLoading(false);
+             setLoading(false);
 
             navigate("/login");
+
         } catch (err) {
             setLoading(false);
             console.error(err);
+
             if (err.response) {
                 console.error(err.response);
                 setError(err.response.data);
